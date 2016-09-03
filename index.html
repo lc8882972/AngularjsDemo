@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh_cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <base href="/">
+    <title>My app</title>
+</head>
+
+<body ng-app="app">
+
+    <div ng-controller="AppController as app">
+        <a ui-sref="home" ui-sref-active="active">Hello</a>
+        <a ui-sref="detail({id:123})" ui-sref-active="active">Hello</a>
+        <div ui-view></div>
+        <div>{{msg}}</div>
+        <e2e-Custom name='{{name}}'>5555</e2e-Custom>
+        <e2e-Component say='{{say}}'></e2e-Component>
+    </div>
+    
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="src/app.js"></script>
+    <script src="./components/home/home.js"></script>
+    <script src="./components/detail/detail.js"></script>
+
+</body>
+
+</html>
